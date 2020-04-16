@@ -19,7 +19,7 @@
     <el-form-item>
         <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
         <el-button @click="resetForm('ruleForm')">重置</el-button>
-        <el-button @click="test()">测试</el-button>
+
     </el-form-item>
 </el-form>
 </template>
@@ -57,13 +57,19 @@
         methods: {
 
             submitForm(formName) {
+                const _this=this
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
 
                       this.$axios.post('/save',this.ruleForm).then(function (resp) {
-                          console.log(resp);
+                          if(resp.data == 'success'){
+                              _this.$alert('《'+_this.ruleForm.coname+'》添加成功！', '消息', {
+                                  confirmButtonText: '确定',
+
+                              })
+                          }
                       })
-                        alert('submit!');
+
                     } else {
 
                         return false;

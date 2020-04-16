@@ -27,9 +27,14 @@
         </el-submenu>
 
 
+       <el-submenu index="3">
+           <template slot="title">采购物料全方位视图</template>
+        <el-menu-item index="/orderInfo">采购订单信息</el-menu-item>
+           <el-menu-item index="/orderQingGou">请购单</el-menu-item>
 
-        <el-menu-item index="/order">采购订单</el-menu-item>
-        <el-menu-item index="/admin">个人中心</el-menu-item>
+       </el-submenu>
+        <el-menu-item index="/personInfo">个人中心</el-menu-item>
+
         <a href="#nowhere" style="color: #222;float: right;padding: 20px;">基础信息设置</a>
         <i class="el-icon-menu" style="float:right;font-size: 45px;color: #222;padding-top: 8px"></i>
      <!--   <span style="position: absolute;padding-top: 20px;right: 46%;font-size: 20px;font-weight: bold">sjj</span>-->
