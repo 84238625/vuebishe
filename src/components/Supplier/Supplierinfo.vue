@@ -35,8 +35,8 @@
                 label="操作"
                 width="100">
             <template slot-scope="scope">
-                <el-button @click="edit(scope.row)" type="text" size="small">修改</el-button>
-                <el-button @click="deleteSupplier(scope.row)" type="text" size="small">删除</el-button>
+                <el-button @click="edit(scope.row)" type="text" >修改</el-button>
+                <el-button @click="deleteSupplier(scope.row)" type="text" >删除</el-button>
             </template>
         </el-table-column>
     </el-table>
@@ -89,7 +89,7 @@
           searchResult () {
                 var _this = this
                 this.$axios
-                    .get('/findBycoameLike?keywords=' + this.$refs.searchBar.keywords, {
+                    .get('/findByconameLike?keywords=' + this.$refs.searchBar.keywords, {
                     }).then(resp => {
                     if (resp && resp.status === 200) {
                         console.log(resp);
@@ -112,6 +112,7 @@
             },
             deleteSupplier(row){
                 const _this = this
+
                 _this.$axios.delete('/deleteById/'+row.id).then(function(resp){
                     _this.$alert('《'+row.coname+'》删除成功！', '消息', {
                         confirmButtonText: '确定',

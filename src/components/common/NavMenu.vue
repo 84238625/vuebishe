@@ -14,21 +14,21 @@
         <!--<el-menu-item index="/supplier">供应商全方位视图</el-menu-item>-->
         <el-submenu index="1">
             <template slot="title">供应商全方位视图</template>
-            <el-menu-item index="/supplier">供应商信息查询</el-menu-item>
+            <el-menu-item index="/supplier">供应商信息</el-menu-item>
             <el-menu-item index="/supplierAdd">供应商增加</el-menu-item>
-            <el-menu-item index="/supplierWeiHU">供应商信息维护</el-menu-item>
+
 
         </el-submenu>
         <el-submenu index="2">
             <template slot="title">采购物料全方位视图</template>
-            <el-menu-item index="/goodsInfo">物料信息查询</el-menu-item>
-            <el-menu-item index="/supplierAdd">物料信息增加</el-menu-item>
-            <el-menu-item index="/supplierWeiHU">物料信息维护</el-menu-item>
+            <el-menu-item index="/goods">物料信息</el-menu-item>
+            <el-menu-item index="/goodsAdd">物料信息增加</el-menu-item>
+
         </el-submenu>
 
 
        <el-submenu index="3">
-           <template slot="title">采购物料全方位视图</template>
+           <template slot="title">采购订单管理</template>
         <el-menu-item index="/orderInfo">采购订单信息</el-menu-item>
            <el-menu-item index="/orderQingGou">请购单</el-menu-item>
 

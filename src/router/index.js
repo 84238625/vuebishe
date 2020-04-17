@@ -11,6 +11,8 @@ import PersonInfo from "../components/Personal/PersonInfo";
 import OrderInfo from "../components/Order/OrderInfo";
 import Orderqinggou from "../components/Order/Orderqinggou";
 import SupplierUpdate from "../components/Supplier/SupplierUpdate";
+import GoodsIndex from "../components/Goods/GoodsIndex";
+import GoodsUpdate from "../components/Goods/GoodsUpdate";
 Vue.use(VueRouter)
 
   const routes = [
@@ -37,11 +39,22 @@ Vue.use(VueRouter)
           component: SupplierAdd,
 
         },
+        {
+          path:'/supplierUpdate',
+          name:'supplierUpdate',
+          component:SupplierUpdate,
+        },
 
         {
-          path:'/goodsInfo',
-          name:'goodsInfo',
-          component:GoodsInfo,
+          path:'/goods',
+          name:'goods',
+          component:GoodsIndex,
+
+        },
+        {
+          path:'/goodsUpdate',
+          name:'goodsUpdate',
+          component:GoodsUpdate,
 
         },
         {
@@ -59,11 +72,7 @@ Vue.use(VueRouter)
           name:'orderQingGou',
           component:Orderqinggou,
         },
-        {
-          path:'/supplierUpdate',
-          name:'supplierUpdate',
-          component:SupplierUpdate,
-        }
+
 
 
       ]

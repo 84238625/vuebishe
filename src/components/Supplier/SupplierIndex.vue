@@ -1,10 +1,14 @@
 <template>
     <el-container>
-        <el-aside style="width: 200px;margin-top: 20px">
-            <switch></switch>
+        <el-aside style="width: 100px;margin-top: 20px">
+
 
         </el-aside>
         <el-main><supplierinfo></supplierinfo></el-main>
+        <el-aside style="width: 100px;margin-top: 20px">
+
+
+        </el-aside>
     </el-container>
 </template>
 
