@@ -7,14 +7,14 @@
         <el-form-item label="料号"     prop="goodsid">
             <el-input  v-model="ruleForm.goodsid"  ></el-input>
         </el-form-item>
-        <el-form-item label="物料名称" prop="">
+        <el-form-item label="物料名称" prop="goodsname">
             <el-input  v-model="ruleForm.goodsname"></el-input>
         </el-form-item>
 
         <el-form-item label="单位" prop="unit">
             <el-input v-model="ruleForm.unit"></el-input>
         </el-form-item>
-        <el-form-item label="单价" prop="pirce">
+        <el-form-item label="单价" prop="price">
             <el-input  v-model="ruleForm.price"></el-input>
         </el-form-item>
         <el-form-item label="供应商" prop="suppliername">

@@ -6,13 +6,13 @@ import Login from "../components/Login";
 import Home from "../components/Home";
 import SupplierIndex from "../components/Supplier/SupplierIndex";
 import SupplierAdd from "../components/Supplier/SupplierAdd";
-import GoodsInfo from "../components/Goods/GoodsInfo";
 import PersonInfo from "../components/Personal/PersonInfo";
 import OrderInfo from "../components/Order/OrderInfo";
 import Orderqinggou from "../components/Order/Orderqinggou";
 import SupplierUpdate from "../components/Supplier/SupplierUpdate";
 import GoodsIndex from "../components/Goods/GoodsIndex";
 import GoodsUpdate from "../components/Goods/GoodsUpdate";
+import GoodsAdd from "../components/Goods/GoodsAdd";
 Vue.use(VueRouter)
 
   const routes = [
@@ -56,6 +56,11 @@ Vue.use(VueRouter)
           name:'goodsUpdate',
           component:GoodsUpdate,
 
+        },
+        {
+          path:'/goodsAdd',
+          name:'goodsAdd',
+          component:GoodsAdd,
         },
         {
           path:'/personInfo',

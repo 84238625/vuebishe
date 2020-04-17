@@ -33,7 +33,8 @@
            <el-menu-item index="/orderQingGou">请购单</el-menu-item>
 
        </el-submenu>
-        <el-menu-item index="/personInfo">个人中心</el-menu-item>
+        <el-menu-item style="float:right;" index="/personInfo">用户管理</el-menu-item>
+        <el-menu-item style="float:right" index="/personInfo">个人中心</el-menu-item>
 
         <a href="#nowhere" style="color: #222;float: right;padding: 20px;">基础信息设置</a>
         <i class="el-icon-menu" style="float:right;font-size: 45px;color: #222;padding-top: 8px"></i>

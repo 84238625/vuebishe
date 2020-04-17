@@ -4,14 +4,14 @@
         <el-form-item label="料号"     prop="goodsid">
             <el-input  v-model="ruleForm.goodsid"  ></el-input>
         </el-form-item>
-        <el-form-item label="物料名称" prop="">
+        <el-form-item label="物料名称" prop="goodsname">
             <el-input  v-model="ruleForm.goodsname"></el-input>
         </el-form-item>
 
         <el-form-item label="单位" prop="unit">
             <el-input v-model="ruleForm.unit"></el-input>
         </el-form-item>
-        <el-form-item label="单价" prop="pirce">
+        <el-form-item label="单价" prop="price">
             <el-input  v-model="ruleForm.price"></el-input>
         </el-form-item>
         <el-form-item label="供应商" prop="suppliername">
@@ -69,13 +69,11 @@
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
 
-                        this.$axios.put('/updateGoods',this.ruleForm).then(function (resp) {
+                        this.$axios.post('/saveGoods',this.ruleForm).then(function (resp) {
                             if(resp.data == 'success'){
-                                _this.$alert('《'+_this.ruleForm.goodsname+'》修改成功！', '消息', {
+                                _this.$alert('《'+_this.ruleForm.goodsname+'》增加成功！', '消息', {
                                     confirmButtonText: '确定',
-                                    callback: action => {
-                                        _this.$router.push('/goods')
-                                    }
+
                                 })
                             }
                         })
